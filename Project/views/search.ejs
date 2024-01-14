@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+    <section class="header-section">
+    <%- include('blocks/header.ejs') -%>
+    </section>
+    <div class="forms">
+    <form action="/search" method="post">
+		<input type="text" name="search">
+		<button type="submit">search</button>
+	  </form>
+    </div>
+    <%- include('blocks/footer.ejs') -%>
+</body>
+</html>

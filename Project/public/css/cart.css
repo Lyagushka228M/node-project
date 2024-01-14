@@ -1,0 +1,36 @@
+body {
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    font-family: "Dosis", sans-serif;
+    background-color: #9500ff;
+}
+.cart-container {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.cart-item {
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.item-name, .item-quantity, .item-price {
+    margin: 5px;
+}
+.remove-button {
+    padding: 5px 10px;
+    background-color: #ff5757;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+}
+.remove-button:hover {
+    background-color: #d93636;
+}

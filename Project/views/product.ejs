@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= card.name %></title>
+    <link rel="stylesheet" href="/css/product.css">
+</head>
+<body>
+  <section class="header-section">
+    <%- include('blocks/header.ejs') -%>
+    </section>
+       
+        <section class="main-container">
+          <section class="header">
+            <div class="column">
+              <img loading="lazy" alt="" src="/<%= card.image %>"class="img" />
+            </div>
+            <div class="column">
+              <div class="div-3">
+                <h1 class="h1"><%= card.name %></h1>
+                <p class="p"><%= card.description %></p>
+                <p class="p">$<%= card.price %></p>
+                <form class="form" action="/addtocart" method="post">
+                  <input type="hidden" name="itemId" value="<%= card.item_Id %>" data-dom-state="input-1" aria-label="Input 1" />
+                  <input type="hidden" name="quantity" value="1" data-dom-state="input-2" aria-label="Input 2" />
+                  <button class="button" aria-label="Add to Cart">Add to Cart</button>
+                </form>
+              </div>
+            </div>
+          </section> 
+        </section>
+        <%- include('blocks/footer.ejs') -%>
+</body>
+</html>

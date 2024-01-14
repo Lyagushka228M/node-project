@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+    <section class="header-section">
+        <%- include('blocks/header.ejs') -%>
+        </section>
+        <div class="forms">
+            <form action="/addrequisites" method="post">
+                <input type="text" name="newCard" placeholder="Credit Card">
+                <input type="text" name="NewValidityDate" placeholder="Validity Date">
+                <input type="text" name="newCvv" placeholder="CVV">
+                <button type="submit" class="remove-button">Proceed to checkout</button>
+              </form>
+        </div>
+        <%- include('blocks/footer.ejs') -%>
+</body>
+</html>

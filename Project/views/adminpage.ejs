@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Form</title>
+    <link rel="stylesheet" href="/css/main.css">
+
+</head>
+<body>
+    <section class="header-section">
+        <%- include('blocks/header.ejs') -%>
+        </section>
+    <div class="forms">
+    <form id="adminForm"  method="post" action="/addcard" enctype="multipart/form-data">
+        <div>
+            <label for="productName">Product Name:</label><br>
+            <input type="text" id="productName" name="productName" required><br>
+        </div>
+        <div>
+            <label for="productName">Product Art.</label><br>
+            <input type="text" id="productArt" name="productArt" required><br>
+        </div>
+        <div>
+            <label for="productDescription">Product Description:</label><br>
+            <textarea id="productDescription" name="productDescription" rows="4" required></textarea><br>
+        </div>
+          <div>
+            <label for="productPrice">Add $ price:</label><br>
+            <input type="number" id="productPrice" name="productPrice" required><br>
+          </div>
+        <div>
+            <label for="productImage">Add Image:</label><br>
+            <input type="file" id="productImage" name="productImage" accept="image/*" required><br>
+        </div>
+        <div>
+            <label for="productType">Product type:</label><br>
+            <input type="text" id="productType" name="productType" required><br>
+        </div>
+        <div>
+            <input type="submit" value="Add Product">
+        </form>
+        </div>
+    
+    
+    <form action="/delcard" method="post">
+        <h2>Delete Card</h2>
+        <label for="productArt">Product Art:</label>
+        <input type="text" id="productArt" name="productArt" required>
+        <input type="submit" value="Delete Product">
+    </form>
+</div>
+<%- include('blocks/footer.ejs') -%>
+</body>
+</html>

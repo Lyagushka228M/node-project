@@ -1,0 +1,71 @@
+body{
+min-height: 100vh;
+font-family: "Dosis", sans-serif;
+background-color: #9500ff;
+}
+.forms {
+opacity: 1;
+height: auto;
+overflow: hidden;
+transition: opacity 0.5s, height 0.5s;
+}
+.forms {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+}
+
+form {
+margin: 20px;
+padding: 20px;
+border: 1px solid #ccc;
+border-radius: 5px;
+width: 300px;
+background-color: #f9f9f9;
+}
+input[type="text"], input[type="password"], input[type="submit"] {
+margin: 10px 0;
+padding: 10px;
+width: 100%;
+box-sizing: border-box;
+}
+input[type="submit"] {
+background-color: #4CAF50;
+color: white;
+border: none;
+cursor: pointer;
+}
+#register{
+color: black;
+}
+#login{
+color: black;
+}
+p{
+font-size: 28px;
+}
+.mainText{
+margin-top: calc(10% - 10px);
+}
+#cardContainer {
+display: flex;
+flex-wrap: wrap;  
+justify-content: space-around; 
+}
+.sort-form {
+  width: 80%; /* Задаем ширину 80% от родительского контейнера */
+  height: 30px; /* Задаем высоту 70px */
+  display: flex;
+  justify-content: space-around; /* Равномерно распределяем кнопки по ширине формы */
+  align-items: center; /* Выравниваем кнопки вертикально по центру */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sort-form button {
+  flex: 1; /* Равномерно распределяем пространство между кнопками */
+  height: 100%; /* Высота кнопок равна высоте формы */
+  margin-left: 10px;
+  margin-right: 10px;
+}

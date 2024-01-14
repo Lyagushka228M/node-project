@@ -1,0 +1,102 @@
+body{
+  font-family: "Dosis", sans-serif;
+  background-color: #9500ff;
+  
+  }
+  .main-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header {
+    display: flex;
+    gap: 20px;
+  }
+
+  @media (max-width: 991px) {
+    .header {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0px;
+    }
+  }
+
+  .column {
+    display: flex;
+    flex-direction: column;
+    line-height: normal;
+    width: 50%;
+    margin-left: 0px;
+  }
+
+  @media (max-width: 991px) {
+    .column {
+      width: 100%;
+    }
+  }
+
+  .img {
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    object-position: center;
+    width: 100%;
+    margin: 0 auto 20px;
+  }
+
+  .div-3 {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    margin-left: -1px;
+    padding: 20px;
+  }
+
+  .h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .p {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .p-2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .form {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+
+  .button {
+    all: unset;
+    background-color: rgb(240, 90, 34);
+    border-bottom: none;
+    border-left: none;
+    border-radius: 5px;
+    border-right: none;
+    border-top: none;
+    border-top-left-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: bold;
+    border-color: rgba(0, 0, 0, 0);
+    padding: 10px 20px;
+  }
+
+  @media (max-width: 991px) {
+    .button {
+      border-color: rgb(255, 255, 255);
+    }
+  }

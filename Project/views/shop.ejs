@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+    <script src="/js/shop.js"></script>
+    <section class="header-section">
+    <%- include ('blocks/header.ejs') -%>
+    </section>
+    <form action="/sort" method="post" class="sort-form">
+        <button type="submit" name="sortOption" value="price-up">price up</button>
+        <button type="submit" name="sortOption" value="price-down">price down</button>
+        <button type="submit" name="sortOption" value="default">default price</button>
+        <button type="submit" name="sortOption" value="pic">show pic</button>
+        <button type="submit" name="sortOption" value="www">show www</button>
+    </form>
+    <div id="cardContainer">
+        <% cards.forEach(card => { %>
+            <a href="/product/<%= card.item_Id %>">
+                <%- include('blocks/card.ejs', { card: card }) -%>
+            </a>
+        <% }); %>
+    </div>
+    <%- include('blocks/footer.ejs') -%>
+</body>
+</html>

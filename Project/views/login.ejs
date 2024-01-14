@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>log IN</title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+    <section class="header-section">
+        <%- include('blocks/header.ejs') -%>
+        </section>
+    <div class="forms">
+    <form id="loginForm" method="post" action="/login">
+        <h2 id="login">Login</h2>
+        <input type="text" name="username" placeholder="Username" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <input type="submit" value="Login">
+    </form>
+    </div>
+    <section class="footer-section">
+    <%- include('blocks/footer.ejs') -%></section>
+</body>
+</html>

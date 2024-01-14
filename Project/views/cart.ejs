@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Cart</title>
+    <link rel="stylesheet" href="/css/cart.css">
+    <!-- <link rel="stylesheet" href="/css/main.css"> -->
+</head>
+<body>
+  <section class="header-section">
+    <%- include('blocks/header.ejs') -%>
+    </section>
+    <section class="cart-section">
+    <div class="cart-container">
+        <% if (cartItems.length === 0) { %>
+          <p>Your cart is empty</p>
+        <% } else { %>
+          <% cartItems.forEach(item => { %>
+            <div class="cart-item">
+              <div class="item-name"><%= item.name %> quantity:<%= item.quantity %></div>
+              <% if (item.quantity === 1) { %>
+                <div class="item-price">$<%= item.total %></div>
+                <% } else { %>
+              <div class="item-price">$<%= item.price %> x <%= item.quantity %> = $<%= item.total %></div> 
+              <% } %>        
+              <form action="/deletefromcart" method="post">
+                <input type="hidden" name="selectedItems" value="<%= item.item_Id %>">
+                <button type="submit" class="remove-button">Remove</button>
+              </form>
+            </div>
+          <% }); %>
+          <div class="cart-summary">
+            <p>Total Items: <%= cartItems.length %></p>
+            <p>Total Cost: $<%= cartItems.reduce((total, item) => total + item.total, 0) %></p>
+          </div>
+          <a href="/addreq"><button>go to</button></a>
+        <% } %>
+      </div></section>
+    <%- include('blocks/footer.ejs') -%>
+</body>
+
+</html>
+
